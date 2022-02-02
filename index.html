@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body style="background: linear-gradient(to bottom left, #3399ff 0%, #ff66cc 100%);">
+
+    <style type="text/css">
+    	.gra {
+    		margin-left: auto;
+    		margin-right: 40px; 
+    		background: linear-gradient(to bottom left, #cc00ff 29%, #0033cc 100%); 
+    		height: 60px; 
+    		border-radius: 25px;
+    		transition: 0.5s;
+    	}
+    	.h {
+    		font-family: Arial; 
+    		font-size: 35px; 
+    		margin-left: auto; 
+    		margin-top: 7px;
+    		transition: 0.5s;
+    	}
+    	.gra:hover {
+    		height: 70px;
+    	}
+    </style>
+
+
+<div class="q1 col-6" style="height: 800px; margin-left: 300px;">
+	<img src='4.jpg' style="width: 800px; border-radius: 20px; margin-top: 20px;">
+	<div style="font-size: 30px;">Вопрос №1</div>
+	<h1>Что сказал Губка Боб на этом кадре?:</h1>
+	<div class="d-flex">
+	    <div class=""><button class="col-12 gra otvet1" style="border: none;"><h1 class="h">Счастье</h1></button></div>
+	    <div class="" style="margin-left: 50px;"><button class="col-12 gra otvet2" style="border: none;"><h1 class="h">Удача</h1></button></div>
+	    <div class="" style="margin-left: 50px;"><button class="col-12 gra otvet3" style="border: none;"><h1 class="h">Вооброжение</h1></button></div>
+    </div>
+</div>
+<div class="q2 col-6" style="height: 800px; margin-left: 300px; display: none;">
+	<video style="border-radius: 20px; margin-top: 100px;" width="800" height="400" controls="controls" poster="video/duel.jpg">
+        <source src="video/duel.ogv" type='video/ogg; codecs="theora, vorbis"'>
+        <source src="video.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+        <source src="video/duel.webm" type='video/webm; codecs="vp8, vorbis"'>
+    </video>
+	<div style="font-size: 30px;">Вопрос №2</div>
+	<h1>Победит ли Патрик в этой схватке?:</h1>
+	<div class="d-flex">
+	    <div class=""><button class="col-12 gra otvet11" style="border: none;"><h1 class="h">Нет</h1></button></div>
+	    <div class="" style="margin-left: 50px;"><button class="col-12 gra otvet12" style="border: none;"><h1 class="h">Да</h1></button></div>
+    </div>
+</div>
+<div class="q3 col-6" style="height: 800px; margin-left: 300px; display: none;">
+	<audio controls>
+		<source src="audio/audio.ogg" type="audio/ogg; codecs=vorbis">
+        <source src="audio.mp3" type="audio/mpeg">
+	</audio>
+	<div style="font-size: 30px;">Вопрос №3</div>
+	<h1>Кто смеётся на аудио записе?:</h1>
+	<div class="d-flex">
+	    <div class=""><button class="col-12 gra otvet111" style="border: none;"><h1 class="h">Спанч боб</h1></button></div>
+	    <div class="" style="margin-left: 50px;"><button class="col-12 gra otvet122" style="border: none;"><h1 class="h">Планктон</h1></button></div>
+	    <div class="" style="margin-left: 50px;"><button class="col-12 gra otvet133" style="border: none;"><h1 class="h">Сквидвард</h1></button></div>
+    </div>
+</div>
+<div class="q4 col-6" style="height: 800px; margin-left: 300px; display: none;">
+	<img src="winner.jpg" style="width: 500px; border-radius: 10px;">
+	    <div class=""><button class="col-8 gra otvet1111" style="border: none;"><h1 class="h">Начать заново</h1></button></div>
+</div>
+
+<script type="text/javascript">
+	document.querySelector('.q1').onclick = function() {
+
+    document.querySelector('.otvet1').onclick = function() {
+    	alert("Это неправельный ответ")
+    }
+    document.querySelector('.otvet2').onclick = function() {
+    	alert("Это неправельный ответ")
+    }
+    document.querySelector('.otvet3').onclick = function() {
+    	alert("Это правельный ответ")
+    	document.querySelector('.q1').style.display = "none";
+        document.querySelector('.q2').style.display = "block";
+    }
+    }
+
+
+	document.querySelector('.q2').onclick = function() {
+		document.querySelector('.otvet11').onclick = function() {
+    	alert("Это неправельный ответ")
+    }
+    document.querySelector('.otvet12').onclick = function() {
+    	alert("Это правельный ответ")
+    	document.querySelector('.q2').style.display = "none";
+        document.querySelector('.q3').style.display = "block";
+        document.querySelector('.q4').style.display = "none";
+
+    }
+	}
+
+
+	document.querySelector('.q3').onclick = function() {
+		document.querySelector('.otvet111').onclick = function() {
+    	alert("Это неправельный ответ")
+    }
+        document.querySelector('.otvet122').onclick = function() {
+    	alert("Это неправельный ответ")
+    }
+        document.querySelector('.otvet133').onclick = function() {
+    	alert("Это правельный ответ")
+        document.querySelector('.q3').style.display = "none";
+        document.querySelector('.q4').style.display = "block";
+
+    }
+	}
+
+
+	document.querySelector('.q4').onclick = function() {
+		document.querySelector('.otvet1111').onclick = function() {
+    	alert("Это правельный ответ")
+    	document.querySelector('.q4').style.display = "none";
+        document.querySelector('.q1').style.display = "block";
+    }
+	}
+
+</script>	
+</body>
+</html>
